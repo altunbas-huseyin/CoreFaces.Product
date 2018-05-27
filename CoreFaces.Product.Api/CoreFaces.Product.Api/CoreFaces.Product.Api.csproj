@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helper\**" />
+    <Content Remove="Helper\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <None Remove="Helper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreFaces.Identity.Client" Version="1.0.0" />
+    <PackageReference Include="CoreFaces.Identity.Helper" Version="1.0.0" />
+    <PackageReference Include="CoreFaces.Identity.Models" Version="1.0.0" />
+    <PackageReference Include="CoreFaces.Status.Services" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.0" />
+    <PackageReference Include="FluentValidation" Version="7.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.0" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\CoreFaces.Product.Models\CoreFaces.Product.Models.csproj" />
+    <ProjectReference Include="..\CoreFaces.Product.Repositories\CoreFaces.Product.Repositories.csproj" />
+    <ProjectReference Include="..\CoreFaces.Product.Services\CoreFaces.Product.Services.csproj" />
+  </ItemGroup>
+
+</Project>

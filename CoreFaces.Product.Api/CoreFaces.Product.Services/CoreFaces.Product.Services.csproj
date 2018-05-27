@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreFaces.Product.Models\CoreFaces.Product.Models.csproj" />
+    <ProjectReference Include="..\CoreFaces.Product.Repositories\CoreFaces.Product.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
