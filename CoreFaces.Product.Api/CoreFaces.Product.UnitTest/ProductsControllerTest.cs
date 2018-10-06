@@ -25,8 +25,8 @@ namespace CoreFaces.Product.UnitTest
             List<Kendo.DynamicLinq.Aggregator> Aggregator = new List<Kendo.DynamicLinq.Aggregator>();
 
             List<Kendo.DynamicLinq.Filter> filterList = new List<Kendo.DynamicLinq.Filter>();
-            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Name", Operator = "eq", Value = "iphone 6", Logic = " and " });
-            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Id", Operator = "eq", Value = Guid.Parse("65e0a829-1bd3-4d51-a009-4a56a4989971"), Logic = " and " });
+            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Name", Operator = "eq", value = "iphone 6", Logic = " and " });
+            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Id", Operator = "eq", value = Guid.Parse("65e0a829-1bd3-4d51-a009-4a56a4989971"), Logic = " and " });
 
             Kendo.DynamicLinq.Filter filter = new Kendo.DynamicLinq.Filter { Filters = filterList, Logic = " and " };
             Kendo.DynamicLinq.View kendoParams = new Kendo.DynamicLinq.View { Take = 0, Skip = 0, Aggregates = null, Filter = filter, Sort = null };
@@ -41,8 +41,8 @@ namespace CoreFaces.Product.UnitTest
             List<Kendo.DynamicLinq.Aggregator> Aggregator = new List<Kendo.DynamicLinq.Aggregator>();
 
             List<Kendo.DynamicLinq.Filter> filterList = new List<Kendo.DynamicLinq.Filter>();
-            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Name", Operator = "eq", Value = "iphone 6", Logic = " and " });
-            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Id", Operator = "eq", Value = Guid.Parse("65e0a829-1bd3-4d51-a009-4a56a4989971"), Logic = " and " });
+            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Name", Operator = "eq", value = "iphone 6", Logic = " and " });
+            filterList.Add(new Kendo.DynamicLinq.Filter { Field = "Id", Operator = "eq", value = Guid.Parse("65e0a829-1bd3-4d51-a009-4a56a4989971"), Logic = " and " });
 
             Kendo.DynamicLinq.Filter filter = new Kendo.DynamicLinq.Filter { Filters = filterList, Logic = " and " };
             Kendo.DynamicLinq.View filters = new Kendo.DynamicLinq.View { Take = 0, Skip = 0, Aggregates = null, Filter = filter, Sort = null };
