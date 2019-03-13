@@ -8,17 +8,17 @@ using System.Text;
 
 namespace CoreFaces.Product.Services
 {
-    public interface ISchemaService
+    public interface IProductSchemaService
     {
         bool DropTables();
         bool EnsureCreated();
     }
 
-    public class SchemaService : ISchemaService
+    public class ProductSchemaService : IProductSchemaService
     {
         private readonly ProductDatabaseContext _productDatabaseContext;
         private readonly ISchemaRepository _schemaRepository;
-        public SchemaService(ProductDatabaseContext productDatabaseContext, IOptions<ProductSettings> productSettings, IHttpContextAccessor iHttpContextAccessor)
+        public ProductSchemaService(ProductDatabaseContext productDatabaseContext, IOptions<ProductSettings> productSettings, IHttpContextAccessor iHttpContextAccessor)
         {
             _productDatabaseContext = productDatabaseContext;
             _schemaRepository = new SchemaRepository(_productDatabaseContext, productSettings, iHttpContextAccessor);

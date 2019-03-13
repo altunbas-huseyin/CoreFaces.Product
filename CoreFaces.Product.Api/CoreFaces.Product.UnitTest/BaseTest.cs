@@ -26,7 +26,7 @@ namespace CoreFaces.Product.UnitTest
         public readonly ITestService _testService;
         public readonly IProductService _productService;
         public readonly IProductCategoryService _productCategoryService;
-        public readonly ISchemaService schemaService;
+        public readonly IProductSchemaService productSchemaService;
         public readonly TestServer _server;
         public readonly HttpClient _client;
         public readonly IOptions<ProductSettings> _productSettings;
@@ -58,7 +58,7 @@ namespace CoreFaces.Product.UnitTest
             _testService = new TestService(_productDatabaseContext, _productSettings, iHttpContextAccessor);
             _productService = new ProductService(_productDatabaseContext, _productSettings, iHttpContextAccessor);
             _productCategoryService = new ProductCategoryService(_productDatabaseContext, _productSettings, iHttpContextAccessor);
-            schemaService = new SchemaService(_productDatabaseContext, _productSettings, iHttpContextAccessor);
+            productSchemaService = new ProductSchemaService(_productDatabaseContext, _productSettings, iHttpContextAccessor);
 
             _server = new TestServer(new WebHostBuilder()
                .UseStartup<Startup>());
