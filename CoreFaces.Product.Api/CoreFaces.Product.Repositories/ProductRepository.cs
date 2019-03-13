@@ -58,7 +58,16 @@ namespace CoreFaces.Product.Repositories
 
         public List<Models.Domain.Product> Get(Kendo.DynamicLinq.View filters)
         {
-            filters.FieldTypeCheckAll();
+            Filter Filter = null;
+            if (filters.Filter != null)
+            {
+                Filter = filters.FieldTypeCheckAll(filters.Filter);
+            }
+            if (Filter != null)
+            {
+                filters.Filter = Filter;
+            }
+
             List<Models.Domain.Product> result = (List<Models.Domain.Product>)_productDatabaseContext.Set<Models.Domain.Product>()
                       .OrderBy(p => p.Id) // EF requires ordering for paging
                    .ToDataSourceResult(filters.Take, filters.Skip, filters.Sort, filters.Filter, filters.Aggregates).Data;
