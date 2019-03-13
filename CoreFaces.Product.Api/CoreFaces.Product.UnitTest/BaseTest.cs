@@ -40,12 +40,12 @@ namespace CoreFaces.Product.UnitTest
            .AddTransient<ITestService, TestService>()
            .BuildServiceProvider();
 
-            DbContextOptionsBuilder<ProductDatabaseContext> builder = new DbContextOptionsBuilder<ProductDatabaseContext>();
+            DbContextOptionsBuilder<ProductDatabaseContext> builderProduct = new DbContextOptionsBuilder<ProductDatabaseContext>();
             var connectionString = "server=localhost;userid=root;password=123456;database=Product;";
-            builder.UseMySql(connectionString);
+            builderProduct.UseMySql(connectionString);
             //.UseInternalServiceProvider(serviceProvider); //burası postgress ile sıkıntı çıkartmıyor, fakat mysql'de çalışmıyor test esnasında hata veriyor.
 
-            _productDatabaseContext = new ProductDatabaseContext(builder.Options);
+            _productDatabaseContext = new ProductDatabaseContext(builderProduct.Options);
             //_context.Database.Migrate();
 
             //Configuration

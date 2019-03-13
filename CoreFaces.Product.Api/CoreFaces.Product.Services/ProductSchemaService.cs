@@ -17,21 +17,21 @@ namespace CoreFaces.Product.Services
     public class ProductSchemaService : IProductSchemaService
     {
         private readonly ProductDatabaseContext _productDatabaseContext;
-        private readonly ISchemaRepository _schemaRepository;
+        private readonly IProductSchemaRepository _productSchemaRepository;
         public ProductSchemaService(ProductDatabaseContext productDatabaseContext, IOptions<ProductSettings> productSettings, IHttpContextAccessor iHttpContextAccessor)
         {
             _productDatabaseContext = productDatabaseContext;
-            _schemaRepository = new SchemaRepository(_productDatabaseContext, productSettings, iHttpContextAccessor);
+            _productSchemaRepository = new ProductSchemaRepository(_productDatabaseContext, productSettings, iHttpContextAccessor);
         }
 
         public bool DropTables()
         {
-            return _schemaRepository.DropTables();
+            return _productSchemaRepository.DropTables();
         }
 
         public bool EnsureCreated()
         {
-            return _schemaRepository.EnsureCreated();
+            return _productSchemaRepository.EnsureCreated();
         }
     }
 }

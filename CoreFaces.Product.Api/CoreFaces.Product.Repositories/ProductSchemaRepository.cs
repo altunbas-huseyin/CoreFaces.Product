@@ -14,17 +14,17 @@ using CoreFaces.Licensing;
 
 namespace CoreFaces.Product.Repositories
 {
-    public interface ISchemaRepository
+    public interface IProductSchemaRepository
     {
         bool DropTables();
         bool EnsureCreated();
     }
 
-    public class SchemaRepository : Licence, ISchemaRepository
+    public class ProductSchemaRepository : Licence, IProductSchemaRepository
     {
         private readonly ProductDatabaseContext _productDatabaseContext;
 
-        public SchemaRepository(ProductDatabaseContext productDatabaseContext, IOptions<ProductSettings> productSettings, IHttpContextAccessor iHttpContextAccessor) : base("Product", iHttpContextAccessor, productSettings.Value.ProductLicenseDomain, productSettings.Value.ProductLicenseKey)
+        public ProductSchemaRepository(ProductDatabaseContext productDatabaseContext, IOptions<ProductSettings> productSettings, IHttpContextAccessor iHttpContextAccessor) : base("Product", iHttpContextAccessor, productSettings.Value.ProductLicenseDomain, productSettings.Value.ProductLicenseKey)
         {
             _productDatabaseContext = productDatabaseContext;
         }
