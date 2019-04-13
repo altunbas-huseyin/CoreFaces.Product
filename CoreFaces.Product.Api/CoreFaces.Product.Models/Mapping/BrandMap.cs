@@ -12,6 +12,7 @@ namespace CoreFaces.Product.Models.Mapping
             entityBuilder.Property(t => t.UpdatedUserId).IsRequired();
             entityBuilder.Property(t => t.ApiUserId).IsRequired();
             entityBuilder.HasKey(t => t.ParentId);
+            entityBuilder.Property(t => t.Code).IsRequired();
             entityBuilder.Property(t => t.Name).IsRequired();
             entityBuilder.Property(t => t.Description).IsRequired();
             entityBuilder.Property(t => t.CreateDate).IsRequired();
@@ -19,6 +20,7 @@ namespace CoreFaces.Product.Models.Mapping
             entityBuilder.Property(t => t.StatusId).IsRequired();
             //Uniq Index
             entityBuilder.HasIndex(t => new { t.ApiUserId, t.Name }).IsUnique();
+            entityBuilder.HasIndex(t => new { t.ApiUserId, t.Code }).IsUnique();
         }
     }
 }
