@@ -31,7 +31,7 @@ namespace CoreFaces.Product.Repositories
 
         public bool DropTables()
         {
-            int result = _productDatabaseContext.Database.ExecuteSqlCommand("DROP TABLE ProductCategoryTranslation; DROP TABLE ProductCategory; DROP TABLE ProductTranslation; DROP TABLE Product;  DROP TABLE Test;");
+            int result = _productDatabaseContext.Database.ExecuteSqlCommand("DROP TABLE ProductCategoryTranslation; DROP TABLE ProductCategory; DROP TABLE ProductTranslation; DROP TABLE Product;  DROP TABLE Test; DROP TABLE Brand;");
             if (result == 0)
                 return true;
             else
