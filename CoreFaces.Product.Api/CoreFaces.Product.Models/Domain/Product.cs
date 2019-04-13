@@ -10,6 +10,7 @@ namespace CoreFaces.Product.Models.Domain
 
         public Guid UserId { get; set; }
         public Guid ParentId { get; set; }
+        public Guid BrandId { get; set; }
         public Guid CreatedUserId { get; set; } = Guid.Parse("00000000-0000-0000-0000-000000000000");
         public Guid UpdatedUserId { get; set; } = Guid.Parse("00000000-0000-0000-0000-000000000000");
         public Guid VendorId { get; set; }

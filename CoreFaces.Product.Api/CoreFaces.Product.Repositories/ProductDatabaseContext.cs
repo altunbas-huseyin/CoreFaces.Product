@@ -27,6 +27,7 @@ namespace CoreFaces.Product.Repositories
             new ProductCategoryTranslationMap(modelBuilder.Entity<ProductCategoryTranslation>());
             new ProductMap(modelBuilder.Entity<CoreFaces.Product.Models.Domain.Product>());
             new ProductTranslationMap(modelBuilder.Entity<ProductTranslation>());
+            new BrandMap(modelBuilder.Entity<Brand>());
 
         }
 
