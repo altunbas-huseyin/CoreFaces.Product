@@ -14,6 +14,7 @@ namespace CoreFaces.Product.Models.Mapping
             entityBuilder.Property(t => t.ParentId).IsRequired();
             entityBuilder.Property(t => t.StockCode);
             entityBuilder.Property(t => t.Name).IsRequired();
+            entityBuilder.Property(t => t.BrandName).IsRequired();
             entityBuilder.Property(t => t.Price).IsRequired();
             entityBuilder.Property(t => t.Vat);
             entityBuilder.Property(t => t.Currency);

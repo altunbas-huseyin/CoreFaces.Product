@@ -16,6 +16,7 @@ namespace CoreFaces.Product.Models.Domain
         public Guid VendorId { get; set; }
         public string StockCode { get; set; }
         public string Name { get; set; }
+        public string BrandName { get; set; }
         /// <summary>
         /// Ürün Fiyatı
         /// </summary>
