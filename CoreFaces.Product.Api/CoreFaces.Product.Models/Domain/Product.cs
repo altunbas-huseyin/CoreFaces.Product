@@ -29,5 +29,6 @@ namespace CoreFaces.Product.Models.Domain
         /// Kdv Oranı yani vergi oranı
         /// </summary>
         public decimal Vat { get; set; }
+        public string SpecialCode1 { get; set; }
     }
 }
