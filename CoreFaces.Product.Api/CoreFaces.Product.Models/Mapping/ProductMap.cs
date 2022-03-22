@@ -18,6 +18,7 @@ namespace CoreFaces.Product.Models.Mapping
             entityBuilder.Property(t => t.Price).IsRequired();
             entityBuilder.Property(t => t.Vat);
             entityBuilder.Property(t => t.Currency);
+            entityBuilder.Property(t => t.SpecialCode1);
             entityBuilder.Property(t => t.CreateDate).IsRequired();
             entityBuilder.Property(t => t.UpdateDate).IsRequired();
             entityBuilder.Property(t => t.StatusId).IsRequired();
