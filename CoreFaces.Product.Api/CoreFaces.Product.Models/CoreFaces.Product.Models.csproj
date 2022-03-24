@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="D:\Projeler\Kendo.DynamicLinq.NetStandard\Kendo.DynamicLinq.NetStandard\Kendo.DynamicLinq.NetStandard.csproj" />
+    <ProjectReference Include="E:\Projeler\Kendo.DynamicLinq.NetStandard\Kendo.DynamicLinq.NetStandard\Kendo.DynamicLinq.NetStandard.csproj" />
   </ItemGroup>
 
 </Project>
